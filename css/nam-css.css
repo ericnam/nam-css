@@ -1,0 +1,131 @@
+/*GRID LAYOUT*/
+@media (min-width: 479px){
+
+}
+
+@media (min-width: 767px){
+	
+}
+
+@media (min-width: 991px){
+	
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;	
+	box-sizing: border-box;
+}
+.col {
+	width: 100%;
+	float: left;
+	box-sizing: border-box;
+}
+
+/*HTML ELEMENTS*/
+:root{
+	/*Global repeated variables*/
+	--navbar-padding-height: 1.95em;
+	--navbar-title-font-size: 1em;
+	--navbar-title-padding: 1.4em 3em 1.4em 3em;
+	--navbar-item-padding: var(--navbar-padding-height) 1.5em var(--navbar-padding-height) 1.5em;
+	--navbar-bottom-border-padding: 5px;
+
+	--navbar-background-color: white;
+}
+
+html {
+  	font-size: 62.5%; 
+}
+body {
+  	font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  	line-height: 1.6;
+  	font-weight: 400;
+	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ 	color: #222; 
+ 	margin: 0;
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently */
+}
+
+a {
+  -webkit-transition: all 0.15s;
+  -moz-transition: all 0.15s;
+  transition: all 0.15s;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+/*CUSTOM CSS*/
+.navbar {
+	background-color: var(--navbar-background-color);
+	font-size: 1em;
+	letter-spacing: 0.1em;
+	border-bottom: 1px dotted grey;
+	float: left;
+	width: 100%;
+}
+.navbar .title,
+.navbar .nav-right .nav-item{
+	display: inline-block;
+	background-color: var(--navbar-background-color);
+	border-top: 5px var(--navbar-background-color) solid;
+	border-bottom: 5px var(--navbar-background-color) solid;
+}
+
+.navbar .title {
+	font-size: var(--navbar-title-font-size);
+	padding: var(--navbar-title-padding);
+}
+.navbar .title:hover {
+	background-color: #D3D3D3;
+	border-top: 5px #D3D3D3 solid;
+	border-bottom: 5px #778899 solid;
+}
+.navbar .nav-right {
+	float: right;
+	font-size: 0.8em;
+}
+.navbar .nav-right .nav-item {
+	padding: var(--navbar-item-padding);
+}
+.navbar .nav-item:hover {
+	background-color: #D3D3D3;
+	border-top: 5px #D3D3D3 solid;
+	border-bottom: 5px #778899 solid;
+}
+.navbar .nav-right .icon {
+	text-decoration: none;
+	display: none;
+}
+
+@media (max-width: 479px){
+.navbar {
+		background-color: red;
+	}
+}
+
+@media (max-width: 767px){
+	.navbar {
+		background-color: blue;
+	}
+	.navbar .nav-right .nav-item{
+		display: none;
+	}
+	.navbar .nav-right .nav-item.icon{
+		display: block;
+	}
+}
+
+@media (max-width: 991px){
+	.navbar {
+		background-color: white;
+	}
+}
